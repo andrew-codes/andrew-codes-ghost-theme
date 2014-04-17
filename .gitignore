@@ -1,0 +1,15 @@
+# IDE
+.idea
+
+# Diff/Merging
+*.orig
+
+# Packages
+node_modules
+bower_components
+
+# Built output
+/dist
+
+# Misc.
+azure.err
