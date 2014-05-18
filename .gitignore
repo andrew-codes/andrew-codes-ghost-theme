@@ -9,7 +9,7 @@ node_modules
 bower_components
 
 # Built output
-/dist
+/assets
 
 # Misc.
 azure.err
