@@ -4,18 +4,20 @@ var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var stylus = require('gulp-stylus');
 var minifyCss = require('gulp-minify-css');
+var bowerFiles = require('gulp-bower-files');
+var es = require('event-stream');
 
 var config = {
     scripts: {
-        src: './src/js/main.js',
+        src: './src/scripts/main.js',
         dest: './assets/js'
     },
     assets: {
-        src: ['./src/**/*.*', '!./src/css/**/*.*', '!./src/js/**/*.*'],
+        src: ['./src/**/*.*', '!./src/styles/**/*.*', '!./src/scripts/**/*.*'],
         dest: './assets'
     },
     styles: {
-        src: './src/css/main.styl',
+        src: './src/styles/main.styl',
         dest: './assets/css'
     },
     clean: {
@@ -35,7 +37,7 @@ gulp.task('scripts', ['clean'], function () {
 });
 
 gulp.task('assets', ['clean'], function () {
-    return  gulp.src(config.assets.src)
+    return es.merge(gulp.src(config.assets.src), bowerFiles())
         .pipe(gulp.dest(config.assets.dest));
 });
 
@@ -44,7 +46,7 @@ gulp.task('clean', [], function () {
         .pipe(clean());
 });
 
-gulp.task('styles', ['clean'], function () {
+gulp.task('styles', ['assets'], function () {
     return  gulp.src(config.styles.src)
         .pipe(stylus())
         .pipe(minifyCss())

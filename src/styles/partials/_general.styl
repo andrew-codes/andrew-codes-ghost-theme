@@ -1,0 +1,251 @@
+@import '_utilities';
+@import '_theme-vars';
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  max-height: 100%;
+}
+
+.site-head {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 40%;
+  margin-bottom: 5rem;
+  color: #fff;
+  background: #303538 no-repeat center center;
+  background-size: cover;
+  clearfix();
+  padding: 2.6em;
+  text-align: left;
+  .blog-title {
+    display: inline-block;
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    small {
+      margin: -10px 30px 0 30px;
+      display: block;
+      text-align: right;
+      font-size: 1.8rem;
+      line-height: 1.5em;
+      font-weight: 300;
+      font-family: 'Noto Serif', serif;
+      letter-spacing: 0;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+  }
+  .profiles {
+    float: right;
+    clear: left;
+    margin: 0 30px;
+  }
+}
+
+::-moz-selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+
+::selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+table th,
+table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #efefef;
+}
+
+table th {
+  color: #000;
+}
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+table tbody + tbody {
+  border-top: 2px solid #efefef;
+}
+
+table table table {
+  background-color: #fff;
+}
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+  background-color: #f6f6f6;
+}
+
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+  background: transparent;
+}
+
+iframe, .fluid-width-video-wrapper {
+  display: block;
+  margin: 1.6em 0;
+}
+
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
+.fluid-width-video-wrapper iframe {
+  margin: 0;
+}
+
+/* ==========================================================================
+   4. General - The main styles for the the theme
+   ========================================================================== */
+
+.blog-logo {
+  text-decoration: none;
+}
+
+/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+.blog-logo img {
+  display: block;
+  max-height: 100px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+/* The details of your blog. Defined in ghost/settings/ */
+.blog-title {
+
+}
+
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  border-bottom: #EBF2F6 1px solid;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Add a little circle in the middle of the border-bottom on our .post
+   just for the lolz and stylepoints. */
+.post:after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: #fff 0 0 0 5px;
+}
+
+.post-title {
+  margin: 0;
+}
+
+.post-title a {
+  text-decoration: none;
+}
+
+.post-excerpt p {
+  margin: 1.6rem 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
+.post-meta {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #9EABB3;
+}
+
+.post-meta a {
+  color: #9EABB3;
+  text-decoration: none;
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+.user-meta {
+  position: relative;
+  padding: 0.3rem 40px 0 100px;
+  min-height: 77px;
+}
+
+.user-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.user-name {
+  display: block;
+  font-weight: bold;
+}
+
+.user-bio {
+  display: block;
+  max-width: 440px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+
+.publish-meta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4.3rem 0 4rem 0;
+  text-align: right;
+}
+
+.publish-heading {
+  display: block;
+  font-weight: bold;
+}
+
+.publish-date {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}

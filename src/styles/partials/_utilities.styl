@@ -1,0 +1,103 @@
+$mobile-min-width = 320px;
+$mobile-max-width = 480px;
+$tablet-min-width = 768px;
+$tablet-max-width = 1024px;
+$desktop-min-width = 1224px;
+$desktop-large-min-width = 1824px;
+
+mobile() {
+  @media only screen and (min-device-width: $mobile-min-width) and (max-device-width: $mobile-max-width) {
+    {block}
+  }
+}
+
+mobile-portrait() {
+  @media only screen and (max-width: $mobile-max-width) {
+    {block}
+  }
+}
+
+mobile-landscape() {
+  @media only screen and (min-width: $mobile-min-width + 1) {
+    {block}
+  }
+}
+
+tablet() {
+  @media only screen and (min-device-width: $tablet-min-width) and (max-device-width: $tablet-max-width) {
+    {block}
+  }
+}
+
+tablet-portrait() {
+  @media only screen and (min-device-width: $tablet-min-width) and (max-device-width: $tablet-max-width) and (orientation: portrait) {
+    {block}
+  }
+}
+
+tablet-landscape() {
+  @media only screen and (min-device-width: $tablet-min-width) and (max-device-width: $tablet-max-width) and (orientation: landscape) {
+    {block}
+  }
+}
+
+desktop() {
+  @media only screen and (min-width: $desktop-min-width) {
+    {block}
+  }
+}
+
+desktop-large() {
+  @media only screen and (min-width: $desktop-large-min-width) {
+    {block}
+  }
+}
+
+hidden() {
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none;
+}
+
+vertically-align-middle() {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+list-unstyled() {
+  & {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+border-radius($radius) {
+  border-radius: $radius;
+}
+
+square(size) {
+  width: size;
+  height: size;
+}
+
+icon-2x() {
+  font-size: 2em;
+}
+
+icon-3x() {
+  font-size: 3em;
+}
+
+icon-4x() {
+  font-size: 4em;
+}
+
+icon-5() {
+  font-size: 5em;
+}

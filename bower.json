@@ -1,0 +1,31 @@
+{
+  "name": "andrew-codes-ghost-theme",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://github.com/andrew-codes/andrew-codes-ghost-theme",
+  "authors": [
+    "Andrew Smith <Andrew@WeAreSoftwareCraftsmen.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-stylus": "*",
+    "font-awesome-stylus": "*",
+    "semantic-grid": "*"
+  },
+  "overrides": {
+    "normalize-stylus": {
+      "main": []
+    },
+    "font-awesome-stylus": {
+      "main": [
+        "fonts/*"
+      ]
+    }
+  }
+}

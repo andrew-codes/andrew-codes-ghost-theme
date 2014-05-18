@@ -1,0 +1,27 @@
+@import '_utilities';
+@import '_theme-vars';
+
+.profiles {
+  text-align: center;
+  img {
+    square($profile-image-height);
+    border-radius($profile-image-height / 2);
+    border: 6px solid #fff;
+    background: #fff;
+  }
+  ul {
+    list-unstyled();
+    li {
+      display: inline-block;
+    }
+    a {
+      color: #fff;
+      &:hover {
+        color: $color-link-hover;
+      }
+    }
+    .fa {
+      icon-2x();
+    }
+  }
+}
