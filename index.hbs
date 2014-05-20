@@ -7,7 +7,7 @@
 <header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}"
                                                                              alt="Blog Logo"/></a>{{/if}}
-            <h1 class="blog-title">{{@blog.title}}
+            <h1 class="title">{{@blog.title}}
                 <small class="blog-description">{{@blog.description}}</small>
             </h1>
             {{> profiles }}
@@ -24,7 +24,7 @@
                 <span class="post-meta"><time
                         datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
 
-                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
 
             </header>
             <section class="post-excerpt">
